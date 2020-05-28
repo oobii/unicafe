@@ -5,8 +5,13 @@ const Statistics = ({good,neutral,bad}) => {
 // const good = props.good
 // const neutral = props.neutral
 // const bad = props.bad
+if ((good+neutral+bad) === 0) {
+  return (<div><h3>No feedback given</h3></div>)
+}
+else {
 
   return (
+
     <div>
 <h3>Statistics</h3>
         good {good}
@@ -24,6 +29,7 @@ const Statistics = ({good,neutral,bad}) => {
       </div>
 
   )
+}
 }
 
 const App = (props) => {
