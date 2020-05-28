@@ -31,11 +31,17 @@ const App = (props) => {
         <button onClick={handleNeutralClick}>neutral</button>
         <button onClick={handleBadClick}>bad</button>
         <h3>Statistics</h3>
-        {good}
+        good {good}
         <br></br>
-        {neutral}
+        neutral {neutral}
         <br></br>
-        {bad}
+        bad {bad}
+        <br></br>
+        all {good + neutral + bad}
+        <br></br>
+        avarage {(good + neutral + bad)/3}
+        <br></br>
+        percentage {good===0 ? 0 : 100*good/(good + neutral + bad)}
       </div>
     </div>
   )
