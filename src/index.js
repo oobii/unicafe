@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
 const Statictic = ({text,value}) => {
-  return (<div>{text} {value}</div>)
+  return (<tr><td>{text}</td><td>{value}</td></tr>)
 
 }
 
@@ -19,12 +19,17 @@ else {
 
     <div>
 <h3>Statistics</h3>
+        <table>
         <Statictic text="good" value={good} />
         <Statictic text="neutral" value={neutral} />
         <Statictic text="bad" value={bad} />
         <Statictic text="all" value={good + neutral + bad} />
         <Statictic text="average" value={(good + neutral + bad)/3} />
         <Statictic text="percentage" value={good===0 ? 0 : 100*good/(good + neutral + bad)} />
+        </table>
+        
+        
+        
       </div>
 
   )
